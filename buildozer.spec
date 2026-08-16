@@ -1,7 +1,7 @@
 [app]
 title = Telegram Zip Splitter
-package.name = zippacker
-package.domain = org.test
+package.name = telepacker
+package.domain = com.sultanpur
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 1.0
@@ -10,7 +10,7 @@ orientation = portrait
 android.permissions = READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE,MANAGE_EXTERNAL_STORAGE
 android.api = 33
 android.minapi = 21
-android.archs = arm64-v8a
+android.archs = armeabi-v7a, arm64-v8a
 android.allow_backup = True
 
 [buildozer]
