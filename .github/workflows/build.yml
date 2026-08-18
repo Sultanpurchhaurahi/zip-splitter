@@ -36,24 +36,35 @@ jobs:
             zlib1g-dev \
             libncurses5-dev \
             libncursesw5-dev \
-            libtinfo5 \
             cmake \
             libffi-dev \
             libssl-dev
 
-      - name: Create Python virtual environment
+      - name: Create virtual environment
         run: |
           python3 -m venv .venv
 
-      - name: Install Python build tools
+      - name: Install compatible build tools
         run: |
           . .venv/bin/activate
 
-          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install --upgrade \
+            "pip==23.3.1" \
+            "setuptools<70" \
+            "wheel"
 
           python -m pip install \
-            buildozer \
-            cython
+            "buildozer==1.5.0" \
+            "cython==0.29.36"
+
+      - name: Show versions
+        run: |
+          . .venv/bin/activate
+
+          python --version
+          pip --version
+          buildozer --version
+          cython --version
 
       - name: Build APK
         run: |
