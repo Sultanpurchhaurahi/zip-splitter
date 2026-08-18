@@ -14,6 +14,9 @@ version = 1.0.1
 
 requirements = python3,kivy,plyer
 
+# Pin pip version to ensure compatibility with Kivy build requirements
+p4a.pip_version = 23.1.2
+
 orientation = portrait
 
 fullscreen = 0
