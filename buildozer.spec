@@ -57,3 +57,7 @@ android.presplash_color = #FFFFFF
 log_level = 2
 
 warn_on_root = 0
+# In buildozer.spec
+requirements = python3,kivy,plyer
+# Add pip version constraint
+p4a.pip_version = 23.1.2
